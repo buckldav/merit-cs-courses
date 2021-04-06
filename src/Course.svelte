@@ -7,37 +7,10 @@
 
 <style lang="scss">
 	.card {
-        background-color: #fff;
-        border-radius: 4px;
-        max-width: 500px;
-        margin: 24px;
-        // height: 100px;
-        position: relative;
-        padding: 34px;
-        color: #444;
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            background-color: #ccc;
-            left: 20px;
-            right: 20px;
-            bottom: 0;
-            top: 50%;
-            z-index: -1;
-            box-shadow: 0 0 40px lighten(#000, 60%);
-            transition: box-shadow .2s ease-in-out;
-        }
-        &.level-3 {
-            &:hover {
-                &:before {
-                    box-shadow: 0 0 80px lighten(#000, 60%);
-                }
-            }
-        }
-        h5 {
-            font-weight: 300;
-            font-size: 30px;
+        width: 450px;
+        height: max-content;
+        
+        h3 {
             margin: 0;
             line-height: 1;
         }
@@ -54,8 +27,8 @@
     }
 </style>
 
-<div class="card level-3">
-    <h5>{course.name}</h5>
+<div class="card">
+    <h3>{course.name}</h3>
     {#if course.prereqs}
         <p><i>{course.prereqs}</i></p>
     {/if}
@@ -74,6 +47,5 @@
         {#each course.tags as tag}
             <Tag tag={tagMap[tag]} />
         {/each}
-        
     </div>
 </div>

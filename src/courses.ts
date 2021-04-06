@@ -18,9 +18,9 @@ export class Course {
     }
 }
 
-export const explorer_half = [
+export const explorer_general = [
     new Course(
-        "Exploring CS",
+        "Exploring Computer Science",
         true,
         false,
         true,
@@ -43,10 +43,10 @@ export const explorer_half = [
             "Like Exploring Computer Science but a full year and you get college credit!",
             "In addition to ECS topics, learn about computer systems, networks, and big data."
         ],
-        ["html", "css", "python", "rasp"],
+        ["html", "css", "js", "python", "rasp"],
     )
 ]
-export const explorer_game = [
+export const explorer_specific = [
     new Course(
         "Computer Programming 1",
         false,
@@ -103,7 +103,7 @@ export const completer = [
             "Learn the basics of authentication and data processing using Google Firebase.",
             "Use the Python language and the Django framework to make robust web applications." 
         ], 
-        ["html", "css", "sass", "js", "node", "python", "git", "npm"],
+        ["html", "css", "sass", "js", "python", "git", "npm"],
         "This course requires at least one semester of explorer courses (except Game Development) prior to taking it."
     ),
     new Course(

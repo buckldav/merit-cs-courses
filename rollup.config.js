@@ -6,7 +6,6 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
-// import scss from 'rollup-plugin-scss';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -52,7 +51,7 @@ export default {
 		css({ output: 'bundle.css' }),
 		// scss({
 		// 	include: ["/**/*.css", "/**/*.scss", "/**/*.sass"],
-		// 	output: "css/style.css",
+		// 	output: "bundle.css",
 		// 	failOnError: true,
 		// }),
 
