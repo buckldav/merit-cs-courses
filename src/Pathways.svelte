@@ -1,6 +1,10 @@
 <style lang="scss">
-    table.card {
+    .card {
         padding: 28px;
+        
+        table {
+            min-width: 800px;
+        }
 
         th, td {
             background: white;
@@ -20,9 +24,16 @@
         margin: 24px;
         max-width: 800px;
     }
+
+    @media screen and (max-width: 768px) {
+        .table-container {
+            overflow-x: scroll;
+            max-width: calc(100% - 56px);
+        }
+    }
 </style>
 
-<div>
+<div class="row">
     <p>
         Any one of these pathways can help you be college and career ready. 
         Mr. Buckley has a strong connection for web development internships for those who complete the web development pathway. 
@@ -31,40 +42,42 @@
     </p>
 </div>
 
-<div>
-    <table class="card">
-        <thead>
-            <tr>
-                <th>Web Development CTE Pathway</th>
-                <th>Programming & Software Development CTE Pathway</th>
-                <th>IT Support Specialist Pathway</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <em>At least 2.0 credits of:</em><br>
-                    Exploring Computer Science (0.5)<br>
-                    App and Web Development 1 (0.5)<br>
-                    AP Computer Science Principles (1.0)
-                </td>
-                <td>
-                    <em>At least 2.0 credits of:</em><br>
-                    Exploring Computer Science (0.5)<br>
-                    Game Development 1 (0.5)<br>
-                    AP Computer Science Principles (1.0)<br>
-                    Computer Programming 1 (1.0)
-                </td>
-                <td>
-                    Participate in Technology Club after school<br>
-                    cyberstartamerica.org
-                </td>
-            </tr>
-            <tr>						
-                <td>Web Development Capstone (1.0)</td>
-                <td>AP Computer Science A (1.0)</td>
-                <td>TestOut PC Pro Certification (1.0)</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="row">
+    <div class="card table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Web Development CTE Pathway</th>
+                    <th>Programming & Software Development CTE Pathway</th>
+                    <th>IT Support Specialist Pathway</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <em>At least 2.0 credits of:</em><br>
+                        Exploring Computer Science (0.5)<br>
+                        App and Web Development 1 (0.5)<br>
+                        AP Computer Science Principles (1.0)
+                    </td>
+                    <td>
+                        <em>At least 2.0 credits of:</em><br>
+                        Exploring Computer Science (0.5)<br>
+                        Game Development 1 (0.5)<br>
+                        AP Computer Science Principles (1.0)<br>
+                        Computer Programming 1 (1.0)
+                    </td>
+                    <td>
+                        Participate in Technology Club after school<br>
+                        cyberstartamerica.org
+                    </td>
+                </tr>
+                <tr>						
+                    <td>Web Development Capstone (1.0)</td>
+                    <td>AP Computer Science A (1.0)</td>
+                    <td>TestOut PC Pro Certification (1.0)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

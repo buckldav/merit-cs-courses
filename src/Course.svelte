@@ -7,7 +7,7 @@
 
 <style lang="scss">
 	.card {
-        width: 450px;
+        width: 28em;
         height: max-content;
         
         h3 {
@@ -23,7 +23,7 @@
     }
 
     .semester {
-        margin-left: -1.5em;
+        margin-left: -1.625em;
     }
 </style>
 

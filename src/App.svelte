@@ -1,8 +1,54 @@
 <script lang="ts">
+	import { faBars } from '@fortawesome/free-solid-svg-icons';
+	import Fa from 'svelte-fa';
 	import Course from './Course.svelte';
 	import { completer, explorer_general, explorer_specific } from './courses';
 	import Pathways from './Pathways.svelte';
-import Tag from './Tag.svelte';
+	
+	const mobileBkpt = 768;
+	let menuOpen = false;
+
+	function handleResize(e) {
+		const article = document.querySelector("article");//document.querySelectorAll("div.card");
+		const max = 1400;
+		const min = 1000;
+		const minPct = 87.5; // Makes the min font 14px
+		if (window.innerWidth <= mobileBkpt) {
+			article.setAttribute("style", "font-size: 100%");
+		} else if (window.innerWidth < max) {
+			let fontSizePct = ((window.innerWidth - min) / (max - min)) + minPct;
+			fontSizePct = fontSizePct < minPct ? minPct : fontSizePct;
+			article.setAttribute("style", "font-size: "+fontSizePct+"%");
+		}
+		
+		if (menuOpen && window.innerWidth > mobileBkpt) {
+			toggleMenu();
+		}
+
+	}
+
+	function toggleMenu() {
+		const nav = document.querySelector("header nav");
+		const overlay = document.querySelector("#overlay");
+		const html = document.querySelector("html");
+		if (!menuOpen) {
+			menuOpen = true;
+			html.setAttribute("style", "scroll-behavior: unset");
+			nav.setAttribute("style", "display: flex");
+			overlay.setAttribute("style", "display: block; position: fixed");
+		} else {
+			menuOpen = false;
+			html.removeAttribute("style");
+			nav.removeAttribute("style");
+			overlay.removeAttribute("style");
+		}
+	}
+
+	function handleMenu(e) {
+		if (window.innerWidth <= mobileBkpt) {
+			toggleMenu();
+		}
+	}
 </script>
 
 <style lang="scss">
@@ -15,6 +61,7 @@ import Tag from './Tag.svelte';
 	}
 
 	header {
+		min-width: 100%;
 		position: fixed;
 		top: 0;
 		z-index: 10;
@@ -22,16 +69,19 @@ import Tag from './Tag.svelte';
 		color: white;
 
 		nav {
-			min-width: 100vw;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 		}
 
-		& a {
+		a {
 			color: white;
 			padding: 12px 16px;
 			display: inline-block;
+
+			&.menu {
+				display: none;
+			}
 		}
 	}
 
@@ -40,6 +90,10 @@ import Tag from './Tag.svelte';
 		padding: 16px 16px 32px;
 		text-align: center;
 		color: #999;
+
+		a {
+			color: inherit;
+		}
 
 		img {
 			display: block;
@@ -72,6 +126,9 @@ import Tag from './Tag.svelte';
 				transition: ease 0.5s;
 				border-style: outset;
 			}
+			&:active {
+				border-style: inset;
+			}
 			&.primary {
 				background: #028090;
 				border-color: #028090;
@@ -85,16 +142,49 @@ import Tag from './Tag.svelte';
 			}
 		}
 	}
+
+	#overlay {
+		display: none;
+		top: 0;
+		z-index: 5;
+		background: #33333322;
+		width: 100%;
+		height: 100%;
+	}
+
+	@media screen and (max-width: 768px) {
+		#hero {
+			height: 90vh !important;
+			clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%) !important;
+		}
+
+		header {
+			nav {
+				display: none;
+				flex-direction: column;
+			}
+			a.menu {
+				display: block;
+				float: right;
+			}
+		}
+
+	}
 </style>
 
+<svelte:window on:resize={handleResize} on:load={handleResize}/>
+
 <header>
-	<nav>
+	<a class="menu" href="#" on:click={handleMenu}><Fa icon={faBars} /></a>
+	<nav on:click={handleMenu}>
 		<a href="#general">Explorer Courses - General</a>
 		<a href="#specific">Explorer Courses - Specific</a>
 		<a href="#completer">Completer Courses</a>
 		<a href="#pathways">CTE Pathways</a>
 	</nav>
 </header>
+
+<div id="overlay" on:click={handleMenu}></div>
 
 <div id="hero">
 	<div class="row">
@@ -116,7 +206,7 @@ import Tag from './Tag.svelte';
 		<section>
 			<a class="anchor" id="general" href="#general">Explorer Courses - General</a>
 			<h2>Explorer Courses - General</h2>
-			<div>
+			<div class="row">
 				{#each explorer_general as c}
 					<Course course={c} />
 				{/each}
@@ -125,7 +215,7 @@ import Tag from './Tag.svelte';
 		<section>
 			<a class="anchor" id="specific" href="#specific">Explorer Courses - Specific</a>
 			<h2>Explorer Courses - Specific</h2>
-			<div>
+			<div class="row">
 				{#each explorer_specific as c}
 					<Course course={c} />
 				{/each}
@@ -134,7 +224,7 @@ import Tag from './Tag.svelte';
 		<section>
 			<a class="anchor" id="completer" href="#completer">Completer Courses</a>
 			<h2>Completer Courses</h2>
-			<div>
+			<div class="row">
 				{#each completer as c}
 					<Course course={c} />
 				{/each}
@@ -150,5 +240,5 @@ import Tag from './Tag.svelte';
 
 <footer>
 	<img src="/graduation.svg" width="400" alt="Graduation">
-	&copy; David Buckley 2021. Made with Svelte.
+	&copy; <a target="_blank" rel="noopenner noreferrer" href="https://davidjaybuckley.com/teacher">David Jay Buckley</a> 2021. Made with <a target="_blank" rel="noopenner noreferrer" href="https://svelte.dev/">Svelte</a>.
 </footer>
