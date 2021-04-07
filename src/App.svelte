@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { faBars } from '@fortawesome/free-solid-svg-icons';
+	import { faBars, faPrint } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 	import Course from './Course.svelte';
 	import { completer, explorer_general, explorer_specific } from './courses';
@@ -16,7 +16,7 @@
 		if (window.innerWidth <= mobileBkpt) {
 			article.setAttribute("style", "font-size: 100%");
 		} else if (window.innerWidth < max) {
-			let fontSizePct = ((window.innerWidth - min) / (max - min)) + minPct;
+			let fontSizePct = ((window.innerWidth - min) / (max - min)) * (100 - minPct) + minPct;
 			fontSizePct = fontSizePct < minPct ? minPct : fontSizePct;
 			article.setAttribute("style", "font-size: "+fontSizePct+"%");
 		}
@@ -101,6 +101,10 @@
 		}
 	}
 
+	.print-only {
+		display: none;
+	}
+
 	#hero {
 		margin-top: 52px;
 		margin-bottom: -36px;
@@ -168,14 +172,38 @@
 				float: right;
 			}
 		}
+	}
 
+	@media print {
+		#hero, header, footer {
+			display: none; 
+		}
+
+		.print-only {
+			display: block;
+			text-align: center;	
+			margin: 0;
+			line-height: 0.5;
+		}
+
+		article {
+			font-size: 95% !important;
+		}
+
+		h2 {
+			margin: 0.5em 0;
+		}		
+
+		#completer {
+			page-break-before: always;
+		}
 	}
 </style>
 
 <svelte:window on:resize={handleResize} on:load={handleResize}/>
 
 <header>
-	<a class="menu" on:click={handleMenu}><Fa icon={faBars} /></a>
+	<a class="menu" role="button" href="javascript:void()" on:click={handleMenu}><Fa icon={faBars} /></a>
 	<nav on:click={handleMenu}>
 		<a href="#general">Explorer Courses - General</a>
 		<a href="#specific">Explorer Courses - Specific</a>
@@ -184,7 +212,11 @@
 	</nav>
 </header>
 
-<div id="overlay" on:click={handleMenu}></div>
+<div id="overlay" on:click={handleMenu} aria-hidden="true"></div>
+<div class="print-only" aria-hidden="true">
+	<h1>Merit Preparatory Academy CS Courses</h1>
+	<p>Questions? Email Mr. Buckley at david.buckley@meritacademy.org</p>
+</div>
 
 <div id="hero">
 	<div class="row">
@@ -196,6 +228,7 @@
 				Check out your options below.
 			</p>
 			<a class="btn primary" href="#general">Browse Courses</a>
+			<a class="btn primary" role="button" href="javascript:window.print()" aria-label="print"><Fa icon={faPrint} /></a>
 		</div>
 		<img src="/packing.svg" width="500" alt="Getting Ready For School">
 	</div>

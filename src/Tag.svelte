@@ -28,6 +28,14 @@
             padding: 0 6px;
         }
     }
+
+    @media print {
+        .tag {
+            color: inherit;
+            border: 1px solid #999 !important;
+            padding: 2px;
+        }
+    }
 </style>
 
 <span class="tag" style="background: {colorDark}; border-color: {tag.color}">

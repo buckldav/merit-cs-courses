@@ -157,3 +157,9 @@ h3 {
 		min-width: unset;
 	}
 }
+
+@media print {
+	.card {
+		border: 1px solid #999;
+	}
+}
