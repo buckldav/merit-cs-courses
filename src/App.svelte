@@ -54,10 +54,10 @@
 <style lang="scss">
 	main, header {
 		padding: 8px;
+	}
 
-		h2 {
-			text-align: center;
-		}
+	main h2 {
+		text-align: center;
 	}
 
 	header {
@@ -133,10 +133,10 @@
 				background: #028090;
 				border-color: #028090;
 			}
-			&.secondary {
-				background: #333;
-				border-color: #333;
-			}
+			// &.secondary {
+			// 	background: #333;
+			// 	border-color: #333;
+			// }
 			&:visited {
 				color: white;
 			}
@@ -175,7 +175,7 @@
 <svelte:window on:resize={handleResize} on:load={handleResize}/>
 
 <header>
-	<a class="menu" href="#" on:click={handleMenu}><Fa icon={faBars} /></a>
+	<a class="menu" on:click={handleMenu}><Fa icon={faBars} /></a>
 	<nav on:click={handleMenu}>
 		<a href="#general">Explorer Courses - General</a>
 		<a href="#specific">Explorer Courses - Specific</a>
@@ -207,6 +207,12 @@
 			<a class="anchor" id="general" href="#general">Explorer Courses - General</a>
 			<h2>Explorer Courses - General</h2>
 			<div class="row">
+				<p>
+					You need to take a semester (0.5) of Digital Studies to graduate, and our counselors recommend that you take care of this in 9th grade (but you can do it later). 
+					The courses below offer a broad experience and are recommended for those who want to try a lot of things or aren't excited about any one class in particular.
+				</p>
+			</div>
+			<div class="row">
 				{#each explorer_general as c}
 					<Course course={c} />
 				{/each}
@@ -216,6 +222,13 @@
 			<a class="anchor" id="specific" href="#specific">Explorer Courses - Specific</a>
 			<h2>Explorer Courses - Specific</h2>
 			<div class="row">
+				<p>
+					These courses are directed towards students who want to learn to build a specific type of project (i.e. a website, app, game, or program).
+					Note that you also need a year (1.0) of CTE credits to graduate, and taking any CS courses in addition to a semester of Digital Studies can help get you there.
+					<br><em>Game Development 1 does not count for Digital Studies.</em>
+				</p>
+			</div>
+			<div class="row">
 				{#each explorer_specific as c}
 					<Course course={c} />
 				{/each}
@@ -224,6 +237,12 @@
 		<section>
 			<a class="anchor" id="completer" href="#completer">Completer Courses</a>
 			<h2>Completer Courses</h2>
+			<div class="row">
+				<p>
+					These courses have prerequisites and dive deeper into programming and software development topics.
+					By the end of these courses, students who put the work in will be prepared for CS jobs and higher education.
+				</p>
+			</div>
 			<div class="row">
 				{#each completer as c}
 					<Course course={c} />
@@ -240,5 +259,6 @@
 
 <footer>
 	<img src="/graduation.svg" width="400" alt="Graduation">
-	&copy; <a target="_blank" rel="noopenner noreferrer" href="https://davidjaybuckley.com/teacher">David Jay Buckley</a> 2021. Made with <a target="_blank" rel="noopenner noreferrer" href="https://svelte.dev/">Svelte</a>.
+	&copy; <a target="_blank" rel="noopenner noreferrer" href="https://davidjaybuckley.com/teacher">David Jay Buckley</a> 2021. Made with <a target="_blank" rel="noopenner noreferrer" href="https://svelte.dev/">Svelte</a>.<br>
+	Questions? Email Mr. Buckley at <a href="mailto:david.buckley@meritacademy.org">david.buckley@meritacademy.org</a>.
 </footer>

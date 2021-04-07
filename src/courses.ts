@@ -39,7 +39,7 @@ export const explorer_general = [
         true,
         true,
         [
-            "This class is recommended for ninth and tenth graders! No, really!",
+            "This class is recommended for 9th and 10th graders! No, really!",
             "Like Exploring Computer Science but a full year and you get college credit!",
             "In addition to ECS topics, learn about computer systems, networks, and big data."
         ],
