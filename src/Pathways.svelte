@@ -37,8 +37,8 @@
         CTE Pathways are sets of courses designed by the state of Utah to help you be college and career ready. 
         Mr. Buckley has a strong connection for web development internships for those who complete the Web Development Pathway. 
         Completing the Programming & Software Development Pathway is perhaps the best way to prepare for a college CS major.
-        Finally, the IT Support Specialist Pathway is not an official CTE Pathway, but prepares you for an IT certification 
-        equivalent to A+ that can get you an IT job right out of high school (<a target="_blank" rel="noopener noreferrer" href="https://w3.testout.com/certification/pro-exams/pc-pro">more info</a>). 
+        Finally, the IT Support Specialist Pathway is not an official CTE Pathway, but prepares you for a <a target="_blank" rel="noopener noreferrer" href="https://w3.testout.com/certification/pro-exams/pc-pro">TestOut PC Pro certification</a>
+        (equivalent to A+) that can get you an IT job right out of high school. 
     </p>
 </div>
 
