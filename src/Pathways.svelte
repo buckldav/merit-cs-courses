@@ -23,6 +23,15 @@
 </style>
 
 <div>
+    <p>
+        Any one of these pathways can help you be college and career ready. 
+        Mr. Buckley has a strong connection for web development internships for those who complete the web development pathway. 
+        The IT support pathway can legitimately get you an IT job out of high school because the certification carries real weight. 
+        Completing AP Computer Science A is perhaps the best way to prepare for a college CS major.
+    </p>
+</div>
+
+<div>
     <table class="card">
         <thead>
             <tr>
@@ -58,13 +67,4 @@
             </tr>
         </tbody>
     </table>
-</div>
-
-<div>
-    <p>
-        Any one of these pathways can help you be college and career ready. 
-        Mr. Buckley has a strong connection for web development internships for those who complete the web development pathway. 
-        The IT support pathway can legitimately get you an IT job out of high school because the certification carries real weight. 
-        Completing AP Computer Science A is perhaps the best way to prepare for a college CS major.
-    </p>
 </div>
