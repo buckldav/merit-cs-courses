@@ -36,6 +36,10 @@ export class Course {
     this.units = units;
     this.prereqs = prereqs;
   }
+
+  slug() {
+    return this.name.split(" ").join("-").toLowerCase();
+  }
 }
 
 export const explorer_general = [

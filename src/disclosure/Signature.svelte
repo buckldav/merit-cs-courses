@@ -1,4 +1,3 @@
-<br />
 <h2>Parent and Student Acknowledgement</h2>
 <p class="row">
   <span>Student Name (print):</span>

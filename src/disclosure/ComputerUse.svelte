@@ -8,8 +8,10 @@
 
   <ul>
     <li>
-      Do not misuse or damage school equipment (see Merit’s AUP, fines may apply
-      for damages).
+      Do not misuse or damage school equipment (see <a
+        href="https://meritprepacademy.org/wp-content/uploads/2019/03/Internet-Policy.pdf"
+        >Merit’s AUP</a
+      >, fines may apply for damages).
     </li>
     <li>
       Give your attention to the person talking. Eye contact, no headphones.
@@ -70,8 +72,10 @@
     information (like birthday, address, phone) in these accounts. BY SIGNING
     BELOW, you are consenting that your student may create these online accounts
     through this class. If you have questions, please email me at
-    david.buckley@meritacademy.org. Finally, if students consistently misuse
-    computers, they will be referred to administration.
+    <a href="mailto:david.buckley@meritacademy.org"
+      >david.buckley@meritacademy.org</a
+    >. Finally, if students consistently misuse computers, they will be referred
+    to administration.
   </p>
 
   <p>
