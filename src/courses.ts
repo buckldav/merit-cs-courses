@@ -179,13 +179,11 @@ export const completer = [
     ],
     ["java", "android", "git"],
     [
-      "Unit 1-2: Primitive Types and Using Objects",
-      "Unit 3: Boolean Expressions and If Statements",
-      "Unit 4: Iteration",
+      "Units 1-2: Primitive Types and Using Objects",
+      "Units 3-4: Boolean Expressions, If Statements, and Iteration",
       "Unit 5: Writing Classes",
-      "Unit 6-8: Arrays, ArrayLists, and 2d Arrays",
-      "Unit 9: Inheritance",
-      "Unit 10: Recursion",
+      "Units 6-8: Arrays, ArrayLists, and 2d Arrays",
+      "Units 9-10: Inheritance and Recursion",
     ],
     "This course requires at least one full year CS course prior to taking it."
   ),

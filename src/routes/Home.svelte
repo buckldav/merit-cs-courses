@@ -78,7 +78,8 @@
       <p>For the year 2021-2022.</p>
       <p class="big">
         Unsure of what computer class to take?<br />
-        Check out your options below.
+        Check out your options below.<br />
+        Select a course to see its Disclosure Document.
       </p>
       <a class="btn primary" href="#general">Browse Courses</a>
       <a

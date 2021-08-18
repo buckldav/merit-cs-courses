@@ -91,6 +91,16 @@
         </section>
       {/if}
     {/each}
+    <iframe
+      class="no-print"
+      title="parent signature form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdFJWLeff61iO2b55nlB0iIMnrZKhAfq25leSiYKd_TRbtRug/viewform?embedded=true"
+      width="100%"
+      height="600"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">Loading…</iframe
+    >
   </article>
 </main>
 
@@ -106,9 +116,10 @@
   @media print {
     .print-only {
       display: block;
-      // text-align: center;
-      // margin: 0;
-      // // line-height: 0.5;
+    }
+
+    .no-print {
+      display: none;
     }
 
     article {
@@ -117,6 +128,13 @@
 
     section {
       break-after: page;
+    }
+  }
+
+  @media screen {
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
     }
   }
 </style>
