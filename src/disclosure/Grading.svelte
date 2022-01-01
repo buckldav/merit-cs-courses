@@ -5,7 +5,8 @@
 <div class="row">
   <span>A: 90-100</span>
   <span>B+: 80-89</span>
-  <span>C+: 70-89</span>
+  <span>C+: 70-79</span>
+  <span>D+: 60-69</span>
   <span>F: 0-69</span>
 </div>
 

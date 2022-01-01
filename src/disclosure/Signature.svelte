@@ -31,6 +31,7 @@
     height: 1em;
     margin-top: 1em;
     margin-bottom: 2em;
+    line-height: 1em;
   }
 
   .blank {

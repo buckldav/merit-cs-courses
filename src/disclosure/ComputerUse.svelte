@@ -30,8 +30,8 @@
     <ul>
       <li>I will follow Merit's phone policy.</li>
       <li>
-        EVERYONE with a phone needs to use the phone caddy. Put it in at the
-        start and take it out at the end.
+        In class, phones are a distraction and you need to learn to manage
+        distractions. I will help you manage in whatever way is necessary.
       </li>
       <li>
         Exception: You may ASK to use your phone for two-factor authentication.
@@ -40,11 +40,11 @@
     </ul>
     <li>Music</li>
     <ul>
-      <li>No listening to music when we are together as a class.</li>
+      <li>No headphones/listening to music when we are together as a class.</li>
       <li>
-        When you are doing independent work, you may use Pandora, Spotify, or
-        other online music streaming. You may use your own earbuds (not AirPods)
-        or the class headphones.
+        When you are doing independent work, you may use Pandora, Spotify,
+        music.youtube.com, or other online music streaming. You may use your own
+        earbuds or the class headphones.
       </li>
       <li>You may request music for me to play over the speakers.</li>
     </ul>
@@ -68,10 +68,14 @@
   <p>
     Your student may need to create at least one online account to use the web
     applications we use to assist in learning. All web applications are approved
-    through the school. Students will not be allowed to use sensitive personal
-    information (like birthday, address, phone) in these accounts. BY SIGNING
-    BELOW, you are consenting that your student may create these online accounts
-    through this class. If you have questions, please email me at
+    through the school's <a
+      href="https://meritprepacademy.org/wp-content/uploads/2019/10/MPADataGovernancePlan.pdf"
+      target="_blank"
+      rel="noopener noreferrer">data governance policy</a
+    >. Students will not be allowed to use sensitive personal information (like
+    birthday, address, phone) in these accounts. BY SIGNING BELOW, you are
+    consenting that your student may create these online accounts through this
+    class. If you have questions, please email me at
     <a href="mailto:david.buckley@meritacademy.org"
       >david.buckley@meritacademy.org</a
     >. Finally, if students consistently misuse computers, they will be referred

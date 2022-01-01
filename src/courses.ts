@@ -91,11 +91,11 @@ export const explorer_specific = [
     true,
     false,
     [
-      "Become adept at programming in C#.",
+      "Become adept at programming in at least one of the following: Python, JavaScript, or C#.",
       "Solve problems and design algorithms.",
       "Make console apps, games, and software!",
     ],
-    ["python", "csharp", "unity"],
+    ["python", "js", "csharp", "unity"],
     [
       "Units 1-2: Programming Environment and Methodology",
       "Units 3-4: Commands, Operations, and Control Structures",
@@ -113,9 +113,10 @@ export const explorer_specific = [
     [
       "Learn to make a game from start to finish!",
       "For beginning and advanced game makers.",
-      "Choose your engine from Scratch to Godot to Unity.",
+      "Make your own sprites, assets, and animations.",
+      "Learn the Unity game engine and little bit of the C# language.",
     ],
-    ["unity"],
+    ["unity", "csharp"],
     [
       "Unit 1: Video Game History (7% of course)",
       "Unit 2: Communication Feature and Game Interface Design (15% of course)",
