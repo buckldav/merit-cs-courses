@@ -26,17 +26,28 @@
   <h2>Computer and Technology Use</h2>
 
   <ul>
-    <li>No Phones, AirPods, or YouTube</li>
+    <li>When You Arrive in Class</li>
     <ul>
-      <li>I will follow Merit's phone policy.</li>
+      <li>Look at the board for the itinerary.</li>
       <li>
-        In class, phones are a distraction and you need to learn to manage
-        distractions. I will help you manage in whatever way is necessary.
+        Open Canvas and any other websites/apps required to do the day's work.
       </li>
       <li>
-        Exception: You may ASK to use your phone for two-factor authentication.
+        When Mr. Buckley starts class, it's time to eliminate distractions and
+        begin.
       </li>
-      <li>Exception: You may ASK to use YouTube for an educational purpose.</li>
+    </ul>
+    <li>Eliminate Distractions</li>
+    <ul>
+      <li>
+        No Phones, AirPods, or YouTube. I will follow <a
+          href="https://meritprepacademy.org/wp-content/uploads/2020/10/Phones-and-Electronic-Policy.pdf"
+          target="_blank"
+          rel="noopener noreferrer">Merit's phone policy</a
+        >. You may ask to use for phone for something like two-factor
+        authentication or other essential use.
+      </li>
+      <li>I will help you manage distractions in whatever way is necessary.</li>
     </ul>
     <li>Music</li>
     <ul>
@@ -46,19 +57,20 @@
         music.youtube.com, or other online music streaming. You may use your own
         earbuds or the class headphones.
       </li>
-      <li>You may request music for me to play over the speakers.</li>
     </ul>
     <li>Free Time</li>
     <ul>
       <li>
-        IF you are done with your work for this class AND you are caught up on
-        your assignments, THEN you may have free time.
+        Free time begins at a designated time by Mr. Buckley. If you finish the
+        day's assignment early, work on another task like Codecademy or other
+        school work until the appointed time. If we reach free time and you are
+        still not done with the day's work, I expect you to finish the work
+        first.
       </li>
-      <li>You may read, draw, or do other homework.</li>
       <li>
-        You may also do suggested computer activities, including: NitroType,
-        coolmathgames, Scratch, Adobe Creative Suite (and equivalent creative
-        tools), Code.org, codecombat.com, typing.com.
+        You may read, or draw. You may also do suggested computer activities,
+        including: NitroType, coolmathgames, Scratch, Adobe Creative Suite (and
+        equivalent creative tools), Code.org, codecombat.com, typing.com.
       </li>
       <li>If you are unsure if an activity is appropriate, ask Mr. Buckley.</li>
     </ul>
