@@ -51,10 +51,10 @@ export const explorer_general = [
     false,
     [
       "Learn essential real-world computing skills to improve your general technology use.",
-      "Learn the basics of programming with Python.",
+      "Learn the basics of programming with JavaScript.",
       "Learn the basics of web development with HTML and CSS.",
     ],
-    ["html", "css", "python"],
+    ["html", "css", "js"],
     [
       "Unit 1: Intro to Computer Science and Computational Thinking",
       "Unit 2: Problem Solving with Computers",
