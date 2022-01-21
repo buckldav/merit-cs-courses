@@ -1,11 +1,10 @@
 <script lang="ts">
   import Tag from "./Tag.svelte";
-  import { tagMap } from "./tags";
-  import type { Course } from "./courses";
+  import type { Course } from "./index";
   export let course: Course;
 
   function onCardClick() {
-    window.location.href = "/#/disclosure?name=" + course.slug();
+    window.location.href = "/#/disclosure?name=" + course.slug;
     window.scrollTo(0, 0);
   }
 </script>
@@ -28,7 +27,7 @@
   </ul>
   <div class="tags">
     {#each course.tags as tag}
-      <Tag tag={tagMap[tag]} />
+      <Tag {tag} />
     {/each}
   </div>
 </div>

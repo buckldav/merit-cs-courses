@@ -2,11 +2,30 @@
   import { faBars, faPrint } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
   import Course from "../Course.svelte";
-  import { completer, explorer_general, explorer_specific } from "../courses";
   import Pathways from "../Pathways.svelte";
 
   const mobileBkpt = 768;
   let menuOpen = false;
+
+  let completer = [];
+  let explorer_general = [];
+  let explorer_specific = [];
+  async function fetchCourses() {
+    const response = await fetch(
+      "https://meritacademy.herokuapp.com/api/courses/"
+    );
+    const json = await response.json();
+    console.log(json);
+    explorer_general = json.filter(
+      (val) => val.category === "Explorer General"
+    );
+    explorer_specific = json.filter(
+      (val) => val.category === "Explorer Specific"
+    );
+    completer = json.filter((val) => val.category === "Completer");
+  }
+
+  fetchCourses();
 
   function handleResize(e) {
     const article = document.querySelector("article"); //document.querySelectorAll("div.card");
@@ -166,16 +185,18 @@
   <a
     target="_blank"
     rel="noopenner noreferrer"
-    href="https://davidjaybuckley.com/teacher">David Jay Buckley</a
+    href="https://davidjaybuckley.com/teacher"
   >
-  2021. Made with
-  <a target="_blank" rel="noopenner noreferrer" href="https://svelte.dev/"
-    >Svelte</a
-  >.<br />
+    davidjaybuckley
+  </a>
+  2022. Made with
+  <a target="_blank" rel="noopenner noreferrer" href="https://svelte.dev/">
+    Svelte
+  </a>.<br />
   Questions? Email Mr. Buckley at
-  <a href="mailto:david.buckley@meritacademy.org"
-    >david.buckley@meritacademy.org</a
-  >.
+  <a href="mailto:david.buckley@meritacademy.org">
+    david.buckley@meritacademy.org
+  </a>.
 </footer>
 
 <style lang="scss">

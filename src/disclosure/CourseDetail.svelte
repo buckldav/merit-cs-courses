@@ -2,7 +2,6 @@
   import { faPrint } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
   import Tag from "../Tag.svelte";
-  import { tagMap } from "../tags";
   import type { Course } from "../courses";
   export let course: Course;
 </script>
@@ -45,7 +44,7 @@
   </ul>
   <div class="tags">
     {#each course.tags as tag}
-      <Tag tag={tagMap[tag]} />
+      <Tag {tag} />
     {/each}
   </div>
   {#if course.units.length > 0}

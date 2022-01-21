@@ -1,11 +1,30 @@
 <script lang="ts">
   import CourseDetail from "../disclosure/CourseDetail.svelte";
-  import { completer, explorer_general, explorer_specific } from "../courses";
   import Why from "../disclosure/Why.svelte";
   import Grading from "../disclosure/Grading.svelte";
   import ComputerUse from "../disclosure/ComputerUse.svelte";
   import Signature from "../disclosure/Signature.svelte";
   import { onMount } from "svelte";
+
+  let completer = [];
+  let explorer_general = [];
+  let explorer_specific = [];
+  async function fetchCourses() {
+    const response = await fetch(
+      "https://meritacademy.herokuapp.com/api/courses/"
+    );
+    const json = await response.json();
+    console.log(json);
+    explorer_general = json.filter(
+      (val) => val.category === "Explorer General"
+    );
+    explorer_specific = json.filter(
+      (val) => val.category === "Explorer Specific"
+    );
+    completer = json.filter((val) => val.category === "Completer");
+  }
+
+  fetchCourses();
 
   let courseName = "";
 
