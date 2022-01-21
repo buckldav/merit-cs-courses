@@ -3,6 +3,7 @@
   import Fa from "svelte-fa";
   import Course from "../Course.svelte";
   import Pathways from "../Pathways.svelte";
+  import { fetchCourses } from "../api";
 
   const mobileBkpt = 768;
   let menuOpen = false;
@@ -10,22 +11,15 @@
   let completer = [];
   let explorer_general = [];
   let explorer_specific = [];
-  async function fetchCourses() {
-    const response = await fetch(
-      "https://meritacademy.herokuapp.com/api/courses/"
-    );
-    const json = await response.json();
-    console.log(json);
-    explorer_general = json.filter(
+  fetchCourses().then((courses) => {
+    explorer_general = courses.filter(
       (val) => val.category === "Explorer General"
     );
-    explorer_specific = json.filter(
+    explorer_specific = courses.filter(
       (val) => val.category === "Explorer Specific"
     );
-    completer = json.filter((val) => val.category === "Completer");
-  }
-
-  fetchCourses();
+    completer = courses.filter((val) => val.category === "Completer");
+  });
 
   function handleResize(e) {
     const article = document.querySelector("article"); //document.querySelectorAll("div.card");

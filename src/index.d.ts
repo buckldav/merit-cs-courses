@@ -6,6 +6,7 @@ export type TagType = {
 
 export type Course = {
     name: string;
+    category: "Explorer General" | "Explorer Specific" | "Completer";
     length: string;
     countsFor: string;
     description: string[];

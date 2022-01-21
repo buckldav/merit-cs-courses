@@ -4,27 +4,21 @@
   import Grading from "../disclosure/Grading.svelte";
   import ComputerUse from "../disclosure/ComputerUse.svelte";
   import Signature from "../disclosure/Signature.svelte";
+  import { fetchCourses } from "../api";
   import { onMount } from "svelte";
 
   let completer = [];
   let explorer_general = [];
   let explorer_specific = [];
-  async function fetchCourses() {
-    const response = await fetch(
-      "https://meritacademy.herokuapp.com/api/courses/"
-    );
-    const json = await response.json();
-    console.log(json);
-    explorer_general = json.filter(
+  fetchCourses().then((courses) => {
+    explorer_general = courses.filter(
       (val) => val.category === "Explorer General"
     );
-    explorer_specific = json.filter(
+    explorer_specific = courses.filter(
       (val) => val.category === "Explorer Specific"
     );
-    completer = json.filter((val) => val.category === "Completer");
-  }
-
-  fetchCourses();
+    completer = courses.filter((val) => val.category === "Completer");
+  });
 
   let courseName = "";
 
@@ -37,7 +31,7 @@
 <main role="main">
   <article>
     {#each explorer_general as c}
-      {#if !courseName || c.slug() === courseName}
+      {#if !courseName || c.slug === courseName}
         <section>
           <CourseDetail course={c} />
           <Why>
@@ -60,7 +54,7 @@
     {/each}
 
     {#each explorer_specific as c}
-      {#if !courseName || c.slug() === courseName}
+      {#if !courseName || c.slug === courseName}
         <section>
           <CourseDetail course={c} />
           <Why>
@@ -89,7 +83,7 @@
     {/each}
 
     {#each completer as c}
-      {#if !courseName || c.slug() === courseName}
+      {#if !courseName || c.slug === courseName}
         <section>
           <CourseDetail course={c} />
           <Why>
