@@ -10,6 +10,9 @@ export async function fetchCourses() {
       if (a.content.toLowerCase().includes("html")) {
         return -2;
       }
+      if (a.content.toLowerCase().includes("aws")) {
+        return 2;
+      }
       if (a.content.toLowerCase() > b.content.toLowerCase()) {
         return 1;
       }
