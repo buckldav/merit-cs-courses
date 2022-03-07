@@ -12,13 +12,15 @@
   let explorer_general = [];
   let explorer_specific = [];
   fetchCourses().then((courses) => {
-    explorer_general = courses.filter(
-      (val) => val.category === "Explorer General"
-    );
-    explorer_specific = courses.filter(
-      (val) => val.category === "Explorer Specific"
-    );
-    completer = courses.filter((val) => val.category === "Completer");
+    explorer_general = courses
+      .filter((val) => val.category === "Explorer General")
+      .sort((a, b) => (a.name > b.name ? 1 : -1));
+    explorer_specific = courses
+      .filter((val) => val.category === "Explorer Specific")
+      .sort((a, b) => (a.name > b.name ? 1 : -1));
+    completer = courses
+      .filter((val) => val.category === "Completer")
+      .sort((a, b) => (a.name > b.name ? 1 : -1));
   });
 
   function handleResize(e) {
@@ -71,8 +73,8 @@
     ><Fa icon={faBars} /></a
   >
   <nav on:click={handleMenu}>
-    <a href="#general">Explorer Courses - General</a>
-    <a href="#specific">Explorer Courses - Specific</a>
+    <a href="#ninth">Recommended for 9th Graders</a>
+    <a href="#allages">For All Ages</a>
     <a href="#completer">Completer Courses</a>
     <a href="#pathways">CTE Pathways</a>
   </nav>
@@ -94,7 +96,7 @@
         Check out your options below.<br />
         Select a course to see its Disclosure Document.
       </p>
-      <a class="btn primary" href="#general">Browse Courses</a>
+      <a class="btn primary" href="#ninth">Browse Courses</a>
       <a
         class="btn primary"
         role="button"
@@ -109,17 +111,17 @@
 <main role="main">
   <article>
     <section>
-      <a class="anchor" id="general" href="#general"
-        >Explorer Courses - General</a
+      <a class="anchor" id="general" href="#ninth"
+        >Recommended for 9th Graders</a
       >
-      <h2>Explorer Courses - General</h2>
+      <h2>Recommended for 9th Graders</h2>
       <div class="row">
         <p>
-          You need to take a semester (0.5) of Digital Studies to graduate, and
-          our counselors recommend that you take care of this in 9th grade (but
-          you can do it later). The courses below offer a broad experience and
-          are recommended for those who want to try a lot of things or aren't
-          excited about any one class in particular.
+          High schoolers need to take a semester (0.5) of Digital Studies to
+          graduate, and our counselors recommend that you take care of this in
+          9th grade (but you can do it later). The courses below offer a broad
+          experience and are recommended for those who want to try a lot of
+          things or aren't excited about any one class in particular.
         </p>
       </div>
       <div class="row">
@@ -129,18 +131,18 @@
       </div>
     </section>
     <section>
-      <a class="anchor" id="specific" href="#specific"
-        >Explorer Courses - Specific</a
-      >
-      <h2>Explorer Courses - Specific</h2>
+      <a class="anchor" id="specific" href="#allages">For All Ages</a>
+      <h2>For All Ages</h2>
       <div class="row">
         <p>
-          These courses are directed towards students who want to learn to build
-          a specific type of project (i.e. a website, app, game, or program).
-          Note that you also need a year (1.0) of CTE credits to graduate, and
-          taking any CS courses in addition to a semester of Digital Studies can
-          help get you there.
-          <br /><em>Game Development 1 does not count for Digital Studies.</em>
+          These courses are directed towards students of all ages (7-12 grade).
+          Note that high schoolers need a year (1.0) of CTE credits to graduate,
+          and taking any CS courses in addition to a semester of Digital Studies
+          can help get you there.
+          <br /><em
+            >Game Development courses do not count for Digital Studies but
+            Computer Programming 1 does.</em
+          >
         </p>
       </div>
       <div class="row">
@@ -185,8 +187,8 @@
   </a>
   2022. Made with
   <a target="_blank" rel="noopenner noreferrer" href="https://svelte.dev/">
-    Svelte
-  </a>.<br />
+    Svelte</a
+  >.<br />
   Questions? Email Mr. Buckley at
   <a href="mailto:david.buckley@meritacademy.org">
     david.buckley@meritacademy.org
@@ -332,7 +334,7 @@
     }
 
     article {
-      font-size: 95% !important;
+      font-size: 92% !important;
     }
 
     h2 {

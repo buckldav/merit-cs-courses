@@ -64,10 +64,8 @@
               program). Note that you also need a year (1.0) of CTE credits to
               graduate, and taking any CS courses in addition to a semester of
               Digital Studies can help get you there.
-              {#if c.name === "Game Development 1"}
-                <br /><em
-                  >Game Development 1 does not count for Digital Studies.</em
-                >
+              {#if c.name.includes("Game Development")}
+                <br /><em>{c.name} does not count for Digital Studies.</em>
               {/if}
             </p>
           </Why>
