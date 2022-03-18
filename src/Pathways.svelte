@@ -21,8 +21,8 @@
       <tbody>
         <tr>
           <td>
-            <em>At least 2.0 credits of:</em><br />
-            Exploring Computer Science (0.5)<br />
+            <em>At least 1.5 credits of:</em><br />
+            Computer Science Principles (0.5)<br />
             Digital Graphics Arts Intro (0.5)<br />
             AP Computer Science Principles (1.0)
           </td>
@@ -36,7 +36,7 @@
           </td>
           <td>
             <em>At least 2.0 credits of:</em><br />
-            Exploring Computer Science (0.5)<br />
+            Computer Science Principles (0.5)<br />
             AP Computer Science Principles (1.0)<br />
             Computer Programming 1 (1.0)
           </td>
