@@ -90,7 +90,7 @@
   <div class="row">
     <div>
       <h1>Merit Preparatory Academy CS Courses</h1>
-      <p>For the year 2021-2022.</p>
+      <p>For the year 2022-2023.</p>
       <p class="big">
         Unsure of what computer class to take?<br />
         Check out your options below.<br />
