@@ -111,9 +111,7 @@
 <main role="main">
   <article>
     <section>
-      <a class="anchor" id="general" href="#ninth"
-        >Recommended for 9th Graders</a
-      >
+      <a class="anchor" id="ninth" href="#ninth">Recommended for 9th Graders</a>
       <h2>Recommended for 9th Graders</h2>
       <div class="row">
         <p>
@@ -131,7 +129,7 @@
       </div>
     </section>
     <section>
-      <a class="anchor" id="specific" href="#allages">For All Ages</a>
+      <a class="anchor" id="allages" href="#allages">For All Ages</a>
       <h2>For All Ages</h2>
       <div class="row">
         <p>
