@@ -28,7 +28,7 @@
           </td>
           <td>
             <em>At least 2.0 credits of:</em><br />
-            Exploring Computer Science (0.5)<br />
+            Computer Science Principles (0.5)<br />
             Game Development 1 (0.5)<br />
             Game Development 2 (0.5)<br />
             AP Computer Science Principles (1.0)<br />
