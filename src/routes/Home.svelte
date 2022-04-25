@@ -122,7 +122,7 @@
           things or aren't excited about any one class in particular.
         </p>
       </div>
-      <div class="row">
+      <div class="row reverse">
         {#each explorer_general as c}
           <Course course={c} />
         {/each}
@@ -152,11 +152,16 @@
     <section>
       <a class="anchor" id="completer" href="#completer">Completer Courses</a>
       <h2>Completer Courses</h2>
-      <div class="row">
+      <div class="row reverse">
         <p>
           These courses have prerequisites and dive deeper into programming and
           software development topics. By the end of these courses, students who
           put the work in will be prepared for CS jobs and higher education.
+          <br /><em
+            >Don't be afraid to join Web Development Capstone, even if you've
+            only done a bit of HTML/CSS or a bit of programming. You'll learn
+            the skills you need here.</em
+          >
         </p>
       </div>
       <div class="row">

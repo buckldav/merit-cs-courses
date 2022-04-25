@@ -35,7 +35,7 @@
             Computer Programming 1 (1.0)
           </td>
           <td>
-            <em>At least 2.0 credits of:</em><br />
+            <em>At least 1.5 credits of:</em><br />
             Computer Science Principles (0.5)<br />
             AP Computer Science Principles (1.0)<br />
             Computer Programming 1 (1.0)
@@ -44,7 +44,10 @@
         <tr>
           <td>Web Development Capstone (1.0)</td>
           <td>AP Computer Science A (1.0)</td>
-          <td>TestOut or AWS Certification (1.0)</td>
+          <td>
+            Web Development Capstone (complete TestOut or AWS Certification)
+            (1.0)
+          </td>
         </tr>
       </tbody>
     </table>

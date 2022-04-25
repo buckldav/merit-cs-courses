@@ -152,6 +152,10 @@ img {
 	max-width: 800px;
 }
 
+.row.reverse {
+	flex-direction: row-reverse;
+}
+
 @media screen and (max-width: 768px) {
 	.row {
 		flex-wrap: wrap;
