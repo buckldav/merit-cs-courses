@@ -54,8 +54,4 @@
   .semester {
     margin-left: -1.625em;
   }
-
-  .small {
-    font-size: 0.75rem;
-  }
 </style>
