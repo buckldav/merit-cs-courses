@@ -145,7 +145,7 @@
       </div>
       <div class="row">
         {#each explorer_specific as c}
-          <Course course={c} />
+          <Course course={c} className="small" />
         {/each}
       </div>
     </section>

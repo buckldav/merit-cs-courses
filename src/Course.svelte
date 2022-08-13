@@ -2,6 +2,7 @@
   import Tag from "./Tag.svelte";
   import type { Course } from "./index";
   export let course: Course;
+  export let className = "";
 
   function onCardClick() {
     window.location.href = "/#/disclosure?name=" + course.slug;
@@ -9,7 +10,7 @@
   }
 </script>
 
-<div class="card" on:click={onCardClick}>
+<div class={`card ${className}`} on:click={onCardClick}>
   <h3>{course.name}</h3>
   {#if course.prereqs}
     <p><i>{course.prereqs}</i></p>
@@ -52,5 +53,9 @@
 
   .semester {
     margin-left: -1.625em;
+  }
+
+  .small {
+    font-size: 0.75rem;
   }
 </style>
