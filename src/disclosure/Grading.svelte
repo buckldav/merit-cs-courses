@@ -3,11 +3,20 @@
 <h3>Merit Grading Scale</h3>
 
 <div class="row">
-  <span>A: 90-100</span>
-  <span>B+: 80-89</span>
-  <span>C+: 70-79</span>
-  <span>D+: 60-69</span>
-  <span>F: 0-69</span>
+  <span>A: 93-100</span>
+  <span>A-: 90-93</span>
+  <span>B+: 87-89</span>
+  <span>B: 83-86</span>
+  <span>B-: 80-82</span>
+  <span>C+: 77-79</span>
+</div>
+<div class="row">
+  <span>C: 73-76</span>
+  <span>C-: 70-72</span>
+  <span>D+: 67-69</span>
+  <span>D+: 63-66</span>
+  <span>D-: 60-62</span>
+  <span>F: 0-59</span>
 </div>
 
 <h3>Formative and Summative Assessments</h3>
