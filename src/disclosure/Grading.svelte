@@ -14,7 +14,7 @@
   <span>C: 73-76</span>
   <span>C-: 70-72</span>
   <span>D+: 67-69</span>
-  <span>D+: 63-66</span>
+  <span>D: 63-66</span>
   <span>D-: 60-62</span>
   <span>F: 0-59</span>
 </div>
